@@ -3,24 +3,27 @@ package br.com.tde2.logic;
 import br.com.tde2.structure.Pilha;
 
 public class ConfereOrdem {
-
-	// Método para verificar e imprimir a ordem (crescente e decrescente) da pilha.
-	public void verificarOrdem(Pilha pilha, String nome) {
-		verificarEImprimirOrdemCrescente(pilha, nome);
-		verificarEImprimirOrdemDecrescente(pilha, nome);
+	public boolean verificarOrdem(Pilha pilha, String nome) {
+		if (verificarEImprimirOrdemCrescente(pilha, nome) || verificarEImprimirOrdemDecrescente(pilha, nome)) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
-	private void verificarEImprimirOrdemCrescente(Pilha pilha, String nomePilha) {
+	private boolean verificarEImprimirOrdemCrescente(Pilha pilha, String nomePilha) {
 		boolean status = pilha.conferirOrdemCrescente();
 		if (status) {
 			System.out.println(nomePilha + " está ordenada em Ordem Crescente!");
 		}
+		return status;
 	}
 
-	private void verificarEImprimirOrdemDecrescente(Pilha pilha, String nomePilha) {
+	private boolean verificarEImprimirOrdemDecrescente(Pilha pilha, String nomePilha) {
 		boolean status = pilha.conferirOrdemDecrescente();
 		if (status) {
 			System.out.println(nomePilha + " está ordenada em Ordem Decrescente!");
 		}
+		return status;
 	}
 }

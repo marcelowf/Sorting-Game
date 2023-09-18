@@ -5,7 +5,7 @@ import br.com.tde2.structure.Pilha;
 public class AutoResolucao {
 	private int jogadas = 0;
 
-	public int ordenarCrescente(Pilha pilha1, Pilha pilha2, Pilha pilha3) {
+	public int ordenarDecrescente(Pilha pilha1, Pilha pilha2, Pilha pilha3) {
 		int tamanhoPilha1 = pilha1.tamanhoDaPilha();
 
 		if (tamanhoPilha1 <= 0) {
@@ -31,7 +31,6 @@ public class AutoResolucao {
 				pilha1.push(item);
 			}
 		}
-
-		return ordenarCrescente(pilha1, pilha2, pilha3);
+		return ordenarDecrescente(pilha1, pilha2, pilha3);
 	}
 }

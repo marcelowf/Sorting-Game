@@ -51,7 +51,7 @@ public class Main {
 				movimentacao.moverPilhas(scanner);
 				contadorDeJogadasRealizadas++;
 			} else if (escolhaDeInterface == 2) {
-				contadorDeJogadasRealizadas = resolução.ordenarCrescente( pilha1, pilha2, pilha3);
+				contadorDeJogadasRealizadas = resolução.ordenarDecrescente( pilha1, pilha2, pilha3);
 			} else if (escolhaDeInterface <= 0 || escolhaDeInterface >= 4) {
 				System.out.println("Escolha inválida");
 			}
